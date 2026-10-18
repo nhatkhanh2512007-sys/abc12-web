@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô phỏng chứng khoán - abc12</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <!-- Khối Header chính với hình nền mờ và chữ đè lên trên -->
+        <div class="header-card" style="position: relative; text-align: center; background: linear-gradient(rgba(30, 33, 48, 0.85), rgba(30, 33, 48, 0.85)), url('/static/images/ảnh chứng khoán.jpg'); background-size: cover; background-position: center; padding: 35px 20px; border-radius: 12px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); overflow: hidden;">
+
+            <!-- Tiêu đề chính -->
+            <h1 style="color: #ffffff; font-size: 28px; font-weight: 700; margin-bottom: 14px; text-shadow: 0 2px 4px rgba(0,0,0,0.6);">
+                Mô phỏng biến động giá mã abc-12 (365 Ngày)
+            </h1>
+
+            <!-- Thông tin cá nhân nằm chung 1 hàng (Màu chữ trắng) -->
+            <p style="color: #ffffff; font-size: 15px; margin: 0; line-height: 1.6; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
+                <strong>Họ tên:</strong> Hồ Hoàng Nhật Khánh &nbsp;|&nbsp; 
+                <strong>Ngành:</strong> Khoa Học Dữ Liệu &nbsp;|&nbsp; 
+                <strong>MSV:</strong> 3110525012
+            </p>
+        </div>
+    </header>
+
+    <main class="container grid">
+        <section class="card">
+            <h2>Video Mô Phỏng Động</h2>
+            <video controls playsinline preload="metadata">
+                <source src="/static/video/simulation_stock.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video HTML5.
+            </video>
+        </section>
+
+        <aside class="card">
+            <h2>Quy Ước Màu Sắc & Hướng Dẫn</h2>
+            <ul class="legend">
+                <li><span class="sw" style="background:gold"></span>Đạt đỉnh/đáy cực trị</li>
+                <li><span class="sw" style="background:limegreen"></span>Xu hướng tăng giá</li>
+                <li><span class="sw" style="background:crimson"></span>Xu hướng giảm giá</li>
+            </ul>
+            <p style="font-size: 13px; color: #aaa; margin-top: 15px;">
+                * <strong>Hình trên:</strong> Nến nhóm 7 ngày.<br>
+                * <strong>Hình dưới:</strong> Dải sóng biên độ dao động min/max kết hợp đường trung bình đổi màu linh hoạt.
+            </p>
+        </aside>
+    </main>
+</body>
+</html>
+<!-- Khu vực hiển thị biểu đồ phân tích -->
+<div class="charts-section" style="margin-top: 30px; background: #1e2130; padding: 20px; border-radius: 10px;">
+    <h2 style="color: #4da6ff; border-bottom: 2px solid #4da6ff; padding-bottom: 8px;">📊 BÁO CÁO PHÂN TÍCH HIỆU SUẤT</h2>
+
+    <!-- Biểu đồ Monthly -->
+    <div class="chart-card" style="margin-bottom: 30px; text-align: center;">
+        <h3 style="color: #fff;">1. Biểu đồ Tỷ suất Lợi nhuận hàng tháng (Monthly Performance)</h3>
+        <img src="{{ url_for('static', path='images/monthly_analysis.png') }}" alt="Monthly Performance Chart" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #333; margin: 15px 0;">
+        <p class="caption" style="color: #cccccc; font-size: 14px; text-align: justify; line-height: 1.6; background: #12141d; padding: 12px; border-radius: 6px;">
+            <strong>Chú thích:</strong> Biểu đồ thể hiện biến động lợi nhuận (%) theo từng tháng trong suốt chu kỳ mô phỏng mô hình <code>abc-12</code>. Qua đó giúp đánh giá tính ổn định của chiến lược đầu tư, nhận diện các tháng tăng trưởng vượt bậc cũng như các giai đoạn thị trường chịu áp lực sụt giảm.
+        </p>
+    </div>
+
+    <!-- Biểu đồ Histogram -->
+    <div class="chart-card" style="text-align: center;">
+        <h3 style="color: #fff;">2. Biểu đồ Tần suất Phân phối Lợi nhuận (Histogram)</h3>
+        <img src="{{ url_for('static', path='images/histogram_quarters.png') }}" alt="Histogram Chart" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #333; margin: 15px 0;">
+        <p class="caption" style="color: #cccccc; font-size: 14px; text-align: justify; line-height: 1.6; background: #12141d; padding: 12px; border-radius: 6px;">
+            <strong> Chú thích:</strong> Biểu đồ Histogram mô tả sự phân bố tần suất của các mức tỷ suất lợi nhuận thu được. Hình dạng phân phối (độ lệch, độ nhọn) giúp đo lường mức độ rủi ro, xác suất xuất hiện các mức lợi nhuận kỳ vọng cũng như các kịch bản rủi ro đuôi (tail risk) của ứng dụng.
+        </p>
+    </div>
+</div>
+<div style="display: flex; gap: 20px; margin-bottom: 25px; justify-content: center; flex-wrap: wrap;">
+    <div style="background: rgba(18, 20, 29, 0.8); border-left: 4px solid #22c55e; padding: 15px 25px; border-radius: 8px; flex: 1; min-width: 200px;">
+        <span style="color: #9ca3af; font-size: 13px;">Lợi nhuận kỳ vọng</span>
+        <h3 style="color: #22c55e; margin: 5px 0 0 0; font-size: 22px;">+28.4%</h3>
+    </div>
+    <div style="background: rgba(18, 20, 29, 0.8); border-left: 4px solid #3b82f6; padding: 15px 25px; border-radius: 8px; flex: 1; min-width: 200px;">
+        <span style="color: #9ca3af; font-size: 13px;">Mô hình áp dụng</span>
+        <h3 style="color: #3b82f6; margin: 5px 0 0 0; font-size: 22px;">abc-12 Quant</h3>
+    </div>
+</div>

@@ -8,20 +8,38 @@
 <body>
     <header class="hero">
         <!-- Khối Header chính với hình nền mờ và chữ đè lên trên -->
-        <div class="header-card" style="position: relative; text-align: center; background: linear-gradient(rgba(30, 33, 48, 0.85), rgba(30, 33, 48, 0.85)), url('/static/images/ảnh chứng khoán.jpg'); background-size: cover; background-position: center; padding: 35px 20px; border-radius: 12px; margin-bottom: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); overflow: hidden;">
+       <!-- BẮT ĐẦU PHẦN BANNER HEADER MỚI -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl mb-8 min-h-[260px] flex flex-col justify-between p-8 text-white bg-cover bg-center"
+     style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.75)), url('/static/images/stock_bg.jpg');">
+    
+    <!-- TIÊU ĐỀ (ĐÃ BỎ "abc-12") -->
+    <div class="z-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white drop-shadow-md">
+            Mô phỏng biến động giá (365 Ngày)
+        </h1>
+    </div>
 
-            <!-- Tiêu đề chính -->
-            <h1 style="color: #ffffff; font-size: 28px; font-weight: 700; margin-bottom: 14px; text-shadow: 0 2px 4px rgba(0,0,0,0.6);">
-                Mô phỏng biến động giá mã abc-12 (365 Ngày)
-            </h1>
-
-            <!-- Thông tin cá nhân nằm chung 1 hàng (Màu chữ trắng) -->
-            <p style="color: #ffffff; font-size: 15px; margin: 0; line-height: 1.6; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">
-                <strong>Họ tên:</strong> Hồ Hoàng Nhật Khánh &nbsp;|&nbsp; 
-                <strong>Ngành:</strong> Khoa Học Dữ Liệu &nbsp;|&nbsp; 
-                <strong>MSV:</strong> 3110525012
-            </p>
+    <!-- THÔNG TIN SINH VIÊN XẾP HÀNG DỌC CĂN TRÁI Ở GÓC DƯỚI -->
+    <div class="z-10 mt-6 flex flex-col space-y-1.5 text-left text-sm md:text-base font-medium text-slate-100 drop-shadow">
+        <div class="flex items-center space-x-2">
+            <span class="text-slate-300 w-24 font-semibold">Họ và tên:</span>
+            <span class="font-bold text-white">Hồ Hoàng Nhật Khánh</span>
         </div>
+        <div class="flex items-center space-x-2">
+            <span class="text-slate-300 w-24 font-semibold">Mã SV:</span>
+            <span class="font-bold text-white">3110525012</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="text-slate-300 w-24 font-semibold">Ngành:</span>
+            <span class="font-bold text-white">Khoa Học Dữ Liệu</span>
+        </div>
+        <div class="flex items-center space-x-2">
+            <span class="text-slate-300 w-24 font-semibold">Lớp:</span>
+            <span class="font-bold text-white">25CKDL</span>
+        </div>
+    </div>
+</div>
+<!-- HẾT PHẦN BANNER HEADER MỚI -->
     </header>
 
     <main class="container grid">

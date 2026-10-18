@@ -2,61 +2,17 @@
 <html lang="vi">
 <script src="https://cdn.tailwindcss.com"></script>
 <head>
-    <header style="
-    position: relative;
-    width: 100%;
-    min-height: 220px;
-    border-radius: 16px;
-    padding: 24px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.85)), 
+<header class="hero" style="
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.8) 100%), 
                 url('/static/images/ảnh chứng khoán.jpg') center/cover no-repeat !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-    text-align: left !important;
 ">
-    
-    <!-- TIÊU ĐỀ THU NHỎ LẠI CĂN TRÁI -->
-    <div>
-        <h1 style="
-            font-size: 1.4rem; 
-            font-weight: 700; 
-            color: #ffffff; 
-            margin: 0; 
-            text-align: left !important;
-            letter-spacing: -0.02em;
-        ">
-            Mô phỏng biến động giá (365 Ngày)
-        </h1>
-    </div>
-
-    <!-- THÔNG TIN SINH VIÊN THU NHỎ, XẾP HÀNG DỌC CĂN THẲNG LỀ TRÁI Ở GÓC DƯỚI -->
-    <div style="
-        display: flex; 
-        flex-direction: column; 
-        gap: 3px; 
-        text-align: left !important; 
-        margin-top: 16px;
-        font-size: 0.85rem;
-        color: #e2e8f0;
-    ">
-        <div style="display: flex; align-items: center;">
-            <span style="width: 80px; font-weight: 600; color: #94a3b8;">Họ và tên:</span>
-            <span style="font-weight: 600; color: #ffffff;">Hồ Hoàng Nhật Khánh</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <span style="width: 80px; font-weight: 600; color: #94a3b8;">Mã SV:</span>
-            <span style="font-weight: 600; color: #ffffff;">3110525012</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <span style="width: 80px; font-weight: 600; color: #94a3b8;">Ngành:</span>
-            <span style="font-weight: 600; color: #ffffff;">Khoa Học Dữ Liệu</span>
-        </div>
-        <div style="display: flex; align-items: center;">
-            <span style="width: 80px; font-weight: 600; color: #94a3b8;">Lớp:</span>
-            <span style="font-weight: 600; color: #ffffff;">25CKDL</span>
+    <div class="hero-content" style="background: transparent; border: none; box-shadow: none;">
+        <h1 style="font-size: 1.6rem; margin-bottom: 12px;">Mô phỏng biến động giá (365 Ngày)</h1>
+        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px; text-align: left; font-size: 0.9rem;">
+            <div><span style="color: #94a3b8; display: inline-block; width: 85px; font-weight: 600;">Họ tên:</span> <strong style="color: #ffffff;">Hồ Hoàng Nhật Khánh</strong></div>
+            <div><span style="color: #94a3b8; display: inline-block; width: 85px; font-weight: 600;">Mã SV:</span> <strong style="color: #ffffff;">3110525012</strong></div>
+            <div><span style="color: #94a3b8; display: inline-block; width: 85px; font-weight: 600;">Ngành:</span> <strong style="color: #ffffff;">Khoa Học Dữ Liệu</strong></div>
+            <div><span style="color: #94a3b8; display: inline-block; width: 85px; font-weight: 600;">Lớp:</span> <strong style="color: #ffffff;">25CKDL</strong></div>
         </div>
     </div>
 </header>
